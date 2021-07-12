@@ -79,7 +79,7 @@ music.volume = 0.3;
 
 var buffer = 0.08;
 
-music.play();
+// music.play();
 
 ////////////////////////////////////////////////////////////////////////////JQUERY STUFF\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 $('#family-friendly').css('border', '4px solid #2e8759');
@@ -277,7 +277,7 @@ socket.on('PLP', function(data){
 
 //New player joined the room
 socket.on('NUA', function(data){
-    pop.play();
+    // pop.play();
     var newUser = {
         avatar: data.drawing,
         playerNum: data.playerNum,
@@ -794,7 +794,6 @@ function update(){
     //console.log(music.currentTime);
     if(music.currentTime > music.duration - buffer){
         music.currentTime = 0;
-        music.play();
     }
     
     if(doVoteTime){
